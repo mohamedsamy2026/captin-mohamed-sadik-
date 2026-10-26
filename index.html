@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كابتن محمد صادق | مدرب سباحة ومنقذ معتمد</title>
+    <meta
+      name="description"
+      content="الموقع الرسمي للكابتن محمد صادق: مدرب سباحة ومنقذ معتمد وأخصائي تأهيل إصابات وتغذية رياضية. تواصل مع الكابتن عبر واتساب."
+    />
+    <meta name="theme-color" content="#061423" />
+    <meta property="og:title" content="كابتن محمد صادق | مدرب سباحة ومنقذ معتمد" />
+    <meta property="og:description" content="تدريب سباحة لجميع الأعمار، إنقاذ، وتأهيل إصابات. تواصل مع الكابتن الآن." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_EG" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- بنحدد الوضع (فاتح/داكن) قبل ما الصفحة تترسم عشان مايحصلش وميض -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>الموقع محتاج JavaScript عشان يشتغل. للحجز كلّم الكابتن على واتساب: 01022349414</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

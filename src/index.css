@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* الوضع الداكن بيتفعّل بإضافة كلاس dark على <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============ ألوان الموقع (مكان واحد للتعديل) ============ */
+:root {
+  --canvas: #f5f9fb;
+  --surface: #ffffff;
+  --ink: #0a1f33;
+  --muted: #4a5d70;
+  --line: #d5e2ea;
+  --brand: #0e7490;
+  --brand-soft: #e0f4fa;
+  color-scheme: light;
+}
+.dark {
+  --canvas: #061423;
+  --surface: #0c2036;
+  --ink: #eaf4f8;
+  --muted: #9fb5c4;
+  --line: #1b3550;
+  --brand: #22d3ee;
+  --brand-soft: #0e2c44;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, "Segoe UI", Tahoma, sans-serif;
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+}
+@theme {
+  --color-brand-strong: #0e7490;
+  --color-brand-strong-hover: #0b5f76;
+  --color-signal: #c2371b; /* لون "المنقذ": للزرار الرئيسي بس */
+  --color-signal-hover: #a52e16;
+  --color-hero: #061423;
+  --color-wa: #138a47;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    line-height: 1.8;
+    overflow-x: clip; /* يمنع التمرير الأفقي بدون ما يكسر sticky */
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    line-height: 1.4;
+  }
+  [id] {
+    scroll-margin-top: 5.5rem;
+  }
+  :focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 3px;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+/* ============ ظهور العناصر عند التمرير ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============ خطوط "حارات المسبح" ============ */
+.lane-line {
+  height: 6px;
+  background: repeating-linear-gradient(
+    to left,
+    var(--brand) 0 36px,
+    transparent 36px 44px,
+    #c2371b 44px 80px,
+    transparent 80px 88px
+  );
+  opacity: 0.85;
+}
+.lanes-bg {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(34, 211, 238, 0.14) 0 2px,
+    transparent 2px 64px
+  );
+}
+
+/* عشان Swiper ما يسيبش حواف قصّاصة للـ focus */
+.swiper {
+  padding-block: 6px;
+}
