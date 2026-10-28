@@ -52,7 +52,7 @@ export default function Header() {
 
   // على الصفحة الرئيسية الهيدر شفّاف فوق الـ Hero الغامق؛ في أي صفحة تانية بيكون ثابت اللون
   const solid = scrolled || open || pathname !== '/'
-  const linkBase = 'rounded-full px-3 py-2 text-[0.95rem] font-medium transition-colors'
+  const linkBase = 'rounded-full px-3 py-2 text-[16px] font-bold transition-colors'
 
   return (
     <header
@@ -73,7 +73,7 @@ export default function Header() {
                 <a
                   href={`/#${link.id}`}
                   aria-current={active === link.id ? 'true' : undefined}
-                  className={`${linkBase} ${
+                  className={`font-sans2 ${linkBase} ${
                     active === link.id ? (solid ? 'bg-brand-soft text-brand' : 'bg-white/15') : solid ? 'hover:text-brand' : 'hover:bg-white/10'
                   }`}
                 >
@@ -90,9 +90,9 @@ export default function Header() {
             <Button
               href={whatsappLink('السلام عليكم كابتن محمد، عايز أحجز حصة سباحة.')}
               variant="primary"
-              className="min-h-11! px-5!"
+              className="min-h-11! px-5! font-sans2"
             >
-              <Icon name="whatsapp" /> احجز الآن
+              <Icon name="whatsapp" className='text-lg' /> احجز الآن
             </Button>
           </div>
           <button
@@ -125,7 +125,7 @@ export default function Header() {
               ))}
             </ul>
             <Button
-              href={whatsappLink('السلام عليكم كابتن محمد، عايز أحجز حصة سباحة.')}
+              href={whatsappLink('السلام عليكم كابتن صادق، عايز أحجز حصة سباحة.')}
               variant="primary"
               className="mt-8 w-full"
             >

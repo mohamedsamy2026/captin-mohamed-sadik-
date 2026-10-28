@@ -23,14 +23,14 @@ export default function Hero() {
 
           <ul className="mt-6 flex flex-wrap gap-3">
             {site.facts.map((fact) => (
-              <li key={fact} className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm">
+              <li key={fact} className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-sans2 font-medium">
                 <Icon name="check" className="text-[#22d3ee]" /> {fact}
               </li>
             ))}
           </ul>
 
           <div className="mt-9 flex flex-wrap gap-3">
-            <Button href={whatsappLink('السلام عليكم كابتن محمد، عايز أحجز حصة سباحة.')} variant="primary">
+            <Button className='font-sans2' href={whatsappLink('السلام عليكم كابتن صادق، عايز أحجز حصة سباحة.')} variant="primary">
               <Icon name="whatsapp" className="text-xl" /> ابدأ مع الكابتن عبر واتساب
             </Button>
             <Button href="#gallery" variant="onDark">

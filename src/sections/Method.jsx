@@ -16,10 +16,10 @@ export default function Method() {
           <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => (
               <Reveal as="li" key={step.id} delay={i * 80}>
-                <div className="relative h-full overflow-hidden rounded-3xl border border-line bg-surface p-6 pb-8">
+                <div className="cursor-pointer hover:-translate-y-2 duration-300 relative h-full overflow-hidden rounded-3xl border border-line bg-surface p-6 pb-8">
                   <span
                     aria-hidden="true"
-                    className="pointer-events-none absolute -top-3 end-4 select-none text-8xl font-black leading-none text-brand/10"
+                    className="pointer-events-none absolute -top-2 end-4 select-none text-8xl font-black leading-none text-brand/10"
                   >
                     {i + 1}
                   </span>
@@ -28,7 +28,7 @@ export default function Method() {
                   </span>
                   <p className="relative mt-5 text-sm font-bold text-brand">الخطوة {i + 1}</p>
                   <h3 className="relative mt-1 text-xl font-bold">{step.title}</h3>
-                  <p className="relative mt-2 leading-8 text-muted">{step.text}</p>
+                  <p className="relative mt-2 leading-8 text-muted font-sans2 font-bold">{step.text}</p>
                   {/* شريط تقدّم: بيزيد مع كل خطوة */}
                   <span
                     aria-hidden="true"

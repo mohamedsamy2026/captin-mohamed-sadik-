@@ -27,6 +27,7 @@
 
 @theme inline {
   --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, "Segoe UI", Tahoma, sans-serif;
+  --font-sans2: ui-sans-serif, system-ui, "Segoe UI", Tahoma, sans-serif;
   --color-canvas: var(--canvas);
   --color-surface: var(--surface);
   --color-ink: var(--ink);

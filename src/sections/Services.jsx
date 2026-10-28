@@ -25,9 +25,9 @@ export default function Services() {
                     <Icon name={s.icon} />
                   </span>
                   <h3 className="text-xl font-bold">{s.title}</h3>
-                  <p className="mt-2 flex-1 leading-8 text-muted">{s.text}</p>
+                  <p className="mt-2 flex-1 leading-8 text-muted font-normal font-sans2">{s.text}</p>
                   {s.tag && (
-                    <span className="mt-5 inline-block self-start rounded-full bg-brand-soft px-3 py-1 text-sm font-semibold text-brand">
+                    <span className="mt-5 inline-block self-start rounded-full bg-brand-soft px-3 py-1 text-sm font-semibold font-sans2 text-brand">
                       {s.tag}
                     </span>
                   )}
