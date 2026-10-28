@@ -1,3 +1,4 @@
+// 1
 import { getAbout } from '../services/content'
 import { useAsync } from '../hooks/useAsync'
 import AsyncContent from '../components/ui/AsyncContent'
