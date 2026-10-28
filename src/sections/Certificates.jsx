@@ -26,12 +26,12 @@ function CertificateCard({ cert, onOpen }) {
             alt={cert.alt}
             loading="lazy"
             decoding="async"
-            className="max-h-full max-w-full rounded-md bg-white object-contain shadow-lg shadow-black/25"
+            className="max-h-full max-w-full rounded-md object-contain shadow-lg shadow-black/25"
           />
         </span>
       </span>
       <span className="flex flex-1 items-start justify-between gap-3 px-4 py-4">
-        <span className="font-semibold leading-7">{cert.title}</span>
+        <span className="font-semibold font-sans2 leading-7">{cert.title}</span>
         <Icon name="zoom" className="mt-1.5 shrink-0 text-brand" />
       </span>
     </button>

@@ -13,7 +13,13 @@ const controlClass =
 // لو عدد الكروت <= العدد الظاهر على الشاشة: بيعرضهم كشبكة عادية من غير Swiper.
 // لو أكتر: بيشغّل Swiper بأزرار سابق/تالي وسحب ولوحة المفاتيح.
 // perView مثال: { base: 1, md: 2, lg: 3 }
-export default function CardCarousel({ items, perView, renderItem, label }) {
+export default function CardCarousel({
+  items,
+  perView,
+  renderItem,
+  label,
+  autoplay = true,
+}) {
   const count = useVisibleCount(perView);
   const [swiper, setSwiper] = useState(null);
   const [edges, setEdges] = useState({ begin: true, end: false });
@@ -50,20 +56,25 @@ export default function CardCarousel({ items, perView, renderItem, label }) {
           prevSlideMessage: "العنصر السابق",
           nextSlideMessage: "العنصر التالي",
         }}
-        slidesPerView={2}
+        slidesPerView={1}
         spaceBetween={GAP}
         onSwiper={(s) => {
           setSwiper(s);
           sync(s);
         }}
         autoplay={{
-          delay: 3000,
+          delay: 3300,
           pauseOnMouseEnter: true,
           disableOnInteraction: false,
         }}
+        // بيوقف الـ autoplay بعد التشغيل لو الكومبوننت اتطلب من غيره (سكشن الفيديوهات)
+        onAfterInit={(s) => {
+          if (!autoplay) s.autoplay?.stop();
+        }}
+        // أقل من 480px: كارت واحد | 480 إلى 899px: كارتين | 900px وأكتر: 3 كروت
         breakpoints={{
-          500: { slidesPerView: 2, spaceBetween: 20 },
-          900: { slidesPerView: 3, spaceBetween: 24 },
+          440: { slidesPerView: 2, spaceBetween: 20 },
+          800: { slidesPerView: 3, spaceBetween: 24 },
         }}
         onSlideChange={sync}
         onResize={sync}

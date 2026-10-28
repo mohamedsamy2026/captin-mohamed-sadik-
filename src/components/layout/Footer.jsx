@@ -44,7 +44,7 @@ export default function Footer() {
           ))}
         </ul>
       </Container>
-      <div className="border-t border-white/10 py-5 text-center text-sm text-white/70">
+      <div className="border-t border-white/10 py-5 text-center font-bold text-md text-white/70 font-sans2">
         <Container>
           تم التطوير بواسطة <span className="font-semibold text-white">{site.developer}</span> © {site.year}
         </Container>

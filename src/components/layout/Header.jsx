@@ -66,7 +66,7 @@ export default function Header() {
           <span>{site.shortName}</span>
         </a>
 
-        <nav aria-label="القائمة الرئيسية" className="hidden lg:block">
+        <nav aria-label="القائمة الرئيسية" className="hidden xl:block">
           <ul className="flex items-center gap-1">
             {navLinks.map((link) => (
               <li key={link.id}>
@@ -97,7 +97,7 @@ export default function Header() {
           </div>
           <button
             type="button"
-            className="grid size-11 place-items-center rounded-full border border-current/30 text-lg lg:hidden"
+            className="grid size-11 place-items-center rounded-full border border-current/30 text-lg xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? 'إغلاق القائمة' : 'فتح القائمة'}
@@ -109,7 +109,7 @@ export default function Header() {
       </Container>
 
       {open && (
-        <div id="mobile-menu" className="fixed inset-x-0 bottom-0 top-[4.5rem] overflow-y-auto bg-canvas text-ink lg:hidden">
+        <div id="mobile-menu" className="fixed inset-x-0 bottom-0 top-[4.5rem] overflow-y-auto bg-canvas text-ink xl:hidden">
           <nav aria-label="القائمة الرئيسية" className="mx-auto flex min-h-full max-w-md flex-col px-6 py-8">
             <ul className="flex flex-col">
               {navLinks.map((link) => (
@@ -127,7 +127,7 @@ export default function Header() {
             <Button
               href={whatsappLink('السلام عليكم كابتن صادق، عايز أحجز حصة سباحة.')}
               variant="primary"
-              className="mt-8 w-full"
+              className="mt-8 w-full font-sans2"
             >
               <Icon name="whatsapp" /> احجز حصة عبر واتساب
             </Button>

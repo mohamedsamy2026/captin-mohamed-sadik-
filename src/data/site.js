@@ -22,6 +22,7 @@ export const site = {
 
 // روابط القائمة الرئيسية (id = رقم القسم في الصفحة)
 export const navLinks = [
+  { id: 'home', label: 'الرئيسيه' },
   { id: 'about', label: 'عن الكابتن' },
   { id: 'services', label: 'الخدمات' },
   { id: 'gallery', label: 'المعرض' },

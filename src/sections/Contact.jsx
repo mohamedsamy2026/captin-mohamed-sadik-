@@ -23,8 +23,8 @@ export default function Contact() {
           <p className="mt-4 max-w-xl text-lg leading-9 text-white/75">
             ابعت رسالة على واتساب بهدفك وسن المتدرب، والكابتن هيرد عليك ويحدد معاك البداية.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href={whatsappLink('السلام عليكم كابتن محمد، عايز أبدأ تدريب سباحة.')} variant="primary">
+          <div className="mt-8 flex flex-wrap gap-3 font-sans2">
+            <Button href={whatsappLink('السلام عليكم كابتن صادق، عايز أبدأ تدريب سباحة.')} variant="primary">
               <Icon name="whatsapp" className="text-xl" /> ابعت رسالة على واتساب
             </Button>
             <Button href={`tel:${site.phone}`} variant="onDark">
@@ -35,16 +35,16 @@ export default function Contact() {
 
         <Reveal delay={100}>
           <div className="space-y-5 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur sm:p-8">
-            <p className={info}>
+            <p className={`${info} font-sans2`}>
               <span className={dot}><Icon name="pin" /></span>
               {site.location}
             </p>
-            <p className={info}>
+            <p className={`${info} font-sans2`}>
               <span className={dot}><Icon name="check" /></span>
               {site.availability}
             </p>
             <div className="border-t border-white/10 pt-5">
-              <p className="mb-3 font-semibold text-white/80">تابعنا على</p>
+              <p className="mb-3 font-bold text-white/80 font-sans2">تابعنا على</p>
               <ul className="flex gap-3">
                 {site.socials.map((s) => (
                   <li key={s.id}>

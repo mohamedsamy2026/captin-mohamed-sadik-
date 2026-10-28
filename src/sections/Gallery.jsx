@@ -30,7 +30,7 @@ function PhotoCard({ item, aspect, onOpen }) {
         style={{ objectPosition: item.focus ?? '50% 35%' }}
       />
       <span className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-hero/85 px-4 py-3 text-white">
-        <span>{item.caption}</span>
+        <span className='md:text-[16px] tezt-[11px]'>{item.caption}</span>
         <Icon name="zoom" className="shrink-0 text-white/80" />
       </span>
     </button>
