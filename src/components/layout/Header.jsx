@@ -88,7 +88,7 @@ export default function Header() {
           <ThemeToggle />
           <div className="hidden sm:block">
             <Button
-              href={whatsappLink('السلام عليكم كابتن محمد، عايز أحجز حصة سباحة.')}
+              href={whatsappLink('السلام عليكم كابتن صادق، عايز أحجز حصة سباحة.')}
               variant="primary"
               className="min-h-11! px-5! font-sans2"
             >
