@@ -44,11 +44,13 @@ function VideoCard({ video }) {
             className="!aspect-auto h-full w-full"
           >
             <MediaProvider>
-              <Poster
-                className="vds-poster"
-                src={video.poster}
-                alt={video.title}
-              />
+              {video.poster && (
+                <Poster
+                  className="vds-poster"
+                  src={video.poster}
+                  alt={video.title}
+                />
+              )}
             </MediaProvider>
             <DefaultVideoLayout icons={defaultLayoutIcons} />
           </MediaPlayer>
@@ -59,13 +61,15 @@ function VideoCard({ video }) {
             aria-label={`تشغيل: ${video.title}`}
             className="group absolute inset-0 size-full"
           >
-            <img
-              src={video.poster}
-              alt={video.title}
-              loading="lazy"
-              draggable={false}
-              className="size-full object-cover"
-            />
+            {video.poster && (
+              <img
+                src={video.poster}
+                alt={video.title}
+                loading="lazy"
+                draggable={false}
+                className="size-full object-cover"
+              />
+            )}
             <span className="absolute inset-0 grid place-items-center">
               <span className="grid size-16 place-items-center rounded-full bg-black/60 text-white transition-transform group-hover:scale-110">
                 <svg viewBox="0 0 24 24" className="size-7 fill-current">

@@ -1,11 +1,12 @@
 import { heroImage } from '../data/hero'
-import { site } from '../data/site'
-import { whatsappLink } from '../utils/whatsapp'
+import { useSite } from '../context/SiteContext'
 import Button from '../components/ui/Button'
 import Container from '../components/ui/Container'
 import Icon from '../components/ui/icons'
 
 export default function Hero() {
+  const site = useSite()
+  const { whatsappLink } = site
   return (
     <section id="home" aria-labelledby="hero-title" className="relative isolate overflow-hidden bg-hero text-white">
       <div className="lanes-bg absolute inset-0 -z-10" aria-hidden="true" />

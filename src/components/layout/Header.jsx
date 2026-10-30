@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { navLinks, site } from '../../data/site'
 import { useActiveSection } from '../../hooks/useActiveSection'
-import { whatsappLink } from '../../utils/whatsapp'
+import { useSite } from '../../context/SiteContext'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
 import Icon from '../ui/icons'
@@ -21,6 +21,7 @@ function LogoMark() {
 }
 
 export default function Header() {
+  const { whatsappLink } = useSite()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const active = useActiveSection(ids)

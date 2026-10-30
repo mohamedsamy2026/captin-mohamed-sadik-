@@ -1,9 +1,10 @@
-import { site } from '../../data/site'
-import { whatsappLink } from '../../utils/whatsapp'
+import { useSite } from '../../context/SiteContext'
 import Container from '../ui/Container'
 import Icon from '../ui/icons'
 
 export default function Footer() {
+  const site = useSite()
+  const { whatsappLink } = site
   const circle = 'grid size-11 place-items-center rounded-full border border-white/25 text-lg text-white transition-colors hover:bg-white/15'
   return (
     <footer className="bg-hero text-white">
@@ -38,7 +39,7 @@ export default function Footer() {
           {site.socials.map((s) => (
             <li key={s.id}>
               <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className={circle}>
-                <Icon name={s.id} />
+                <Icon name={s.icon} />
               </a>
             </li>
           ))}

@@ -26,6 +26,15 @@ import {
   FaVideo,
   FaCertificate,
   FaCircleCheck,
+  FaYoutube,
+  FaXTwitter,
+  FaSnapchat,
+  FaTelegram,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaGlobe,
+  FaTrashCan,
+  FaPenToSquare,
 } from 'react-icons/fa6'
 
 // الأسماء النصّية دي هي اللي بتتحط في فولدر data (وبعدين في قاعدة البيانات)
@@ -57,6 +66,15 @@ const map = {
   video: FaVideo,
   certificate: FaCertificate,
   check: FaCircleCheck,
+  youtube: FaYoutube,
+  x: FaXTwitter,
+  snapchat: FaSnapchat,
+  telegram: FaTelegram,
+  linkedin: FaLinkedinIn,
+  pinterest: FaPinterestP,
+  globe: FaGlobe,
+  trash: FaTrashCan,
+  edit: FaPenToSquare,
 }
 
 export default function Icon({ name, className = '', ...rest }) {

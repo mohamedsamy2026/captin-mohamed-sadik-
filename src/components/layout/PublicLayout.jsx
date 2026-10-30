@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom'
+import { SiteProvider } from '../../context/SiteContext'
 import Footer from './Footer'
 import Header from './Header'
 import WhatsAppFloat from './WhatsAppFloat'
@@ -7,7 +8,7 @@ import WhatsAppFloat from './WhatsAppFloat'
 // مستقبلًا: لو اتضافت لوحة تحكم هتبقى ليها Layout تاني منفصل، ومحدّش يلمس ده.
 export default function PublicLayout() {
   return (
-    <>
+    <SiteProvider>
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-signal focus:px-5 focus:py-3 focus:text-white"
@@ -20,6 +21,6 @@ export default function PublicLayout() {
       </main>
       <Footer />
       <WhatsAppFloat />
-    </>
+    </SiteProvider>
   )
 }

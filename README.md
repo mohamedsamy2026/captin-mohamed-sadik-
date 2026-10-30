@@ -1,6 +1,6 @@
 # موقع كابتن محمد صادق (Landing Page)
 
-React + Vite + Tailwind CSS v4 + Swiper. عربي فقط (RTL). مفيش تسجيل دخول ولا لوحة تحكم ولا قاعدة بيانات في المرحلة دي.
+React + Vite + Tailwind CSS v4 + Swiper. عربي فقط (RTL). فيه لوحة تحكم على `/admin` وقاعدة بيانات Supabase. اقرا `README-SETUP.md` للإعداد.
 
 ## التشغيل
 

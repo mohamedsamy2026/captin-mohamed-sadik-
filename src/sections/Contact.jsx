@@ -1,5 +1,4 @@
-import { site } from '../data/site'
-import { whatsappLink } from '../utils/whatsapp'
+import { useSite } from '../context/SiteContext'
 import Button from '../components/ui/Button'
 import Container from '../components/ui/Container'
 import Icon from '../components/ui/icons'
@@ -7,6 +6,8 @@ import Reveal from '../components/ui/Reveal'
 
 // شريط تواصل بسيط (بدون فورم): واتساب + اتصال + المكان + السوشيال.
 export default function Contact() {
+  const site = useSite()
+  const { whatsappLink } = site
   const info = 'flex items-center gap-3 font-medium'
   const dot = 'grid size-11 shrink-0 place-items-center rounded-full bg-white/10 text-[#22d3ee]'
   return (
@@ -55,7 +56,7 @@ export default function Contact() {
                       aria-label={s.label}
                       className="grid size-12 place-items-center rounded-full border border-white/25 text-lg transition-colors hover:bg-white/15"
                     >
-                      <Icon name={s.id} />
+                      <Icon name={s.icon} />
                     </a>
                   </li>
                 ))}

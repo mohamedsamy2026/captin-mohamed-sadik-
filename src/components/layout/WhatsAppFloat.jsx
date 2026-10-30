@@ -1,8 +1,9 @@
-import { whatsappLink } from '../../utils/whatsapp'
+import { useSite } from '../../context/SiteContext'
 import Icon from '../ui/icons'
 
 // زر واتساب ثابت. مكانه تحت على الشمال (عكس اتجاه القراءة) عشان ما يغطيش المحتوى.
 export default function WhatsAppFloat() {
+  const { whatsappLink } = useSite()
   return (
     <a
       href={whatsappLink('السلام عليكم كابتن صادق، عايز أستفسر عن التدريب.')}
